@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView country;
 
-    public static final String countries[]={"Nepal","China","India"};
+    public static final String countries[]={"Nepal", "Kathmandu","China","India"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         country = findViewById(R.id.list);
 
-        ArrayAdapter adapter = new ArrayAdapter()
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,countries);
+        country.setAdapter(adapter);
     }
 }
